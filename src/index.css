@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico:wght@400&family=Sacramento:wght@400&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Birthday Website Design System - Soft pastels and cute animations */
+
+@layer base {
+  :root {
+    /* Soft Pastel Color Palette - Romantic & Cute */
+    --background: 320 100% 98%;
+    --foreground: 340 15% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 15% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 15% 25%;
+
+    /* Primary - Soft Pink */
+    --primary: 330 100% 85%;
+    --primary-foreground: 340 15% 25%;
+    --primary-glow: 330 100% 90%;
+
+    /* Secondary - Lavender */
+    --secondary: 280 60% 88%;
+    --secondary-foreground: 340 15% 25%;
+
+    /* Accent - Peach */
+    --accent: 25 100% 88%;
+    --accent-foreground: 340 15% 25%;
+
+    /* Cream/Warm */
+    --warm: 45 100% 95%;
+    --warm-foreground: 340 15% 25%;
+
+    /* Additional Romantic Colors */
+    --rose: 345 100% 90%;
+    --rose-foreground: 340 15% 25%;
+    --lavender: 270 60% 90%;
+    --lavender-foreground: 340 15% 25%;
+    --peach: 30 100% 92%;
+    --peach-foreground: 340 15% 25%;
+    --cream: 50 100% 96%;
+    --cream-foreground: 340 15% 25%;
+
+    --muted: 320 30% 95%;
+    --muted-foreground: 340 30% 55%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 320 40% 92%;
+    --input: 320 40% 94%;
+    --ring: 330 100% 85%;
+
+    --radius: 1rem;
+
+    /* Beautiful Romantic Gradients */
+    --gradient-birthday: linear-gradient(135deg, hsl(345 100% 90%), hsl(280 60% 90%), hsl(30 100% 92%));
+    --gradient-soft: linear-gradient(180deg, hsl(320 100% 98%), hsl(280 100% 96%), hsl(50 100% 96%));
+    --gradient-cake: linear-gradient(45deg, hsl(45 100% 85%), hsl(345 100% 90%));
+    --gradient-surprise: radial-gradient(circle, hsl(345 100% 90%), hsl(280 60% 90%));
+    --gradient-romantic: linear-gradient(135deg, hsl(345 100% 90%), hsl(270 60% 90%), hsl(50 100% 96%));
+    --gradient-love: linear-gradient(180deg, hsl(330 100% 90%), hsl(25 100% 92%), hsl(280 60% 90%));
+
+    /* Shadows & Glows */
+    --shadow-soft: 0 4px 20px hsl(330 100% 85% / 0.3);
+    --shadow-card: 0 8px 30px hsl(280 60% 88% / 0.2);
+    --glow-birthday: 0 0 30px hsl(330 100% 85% / 0.6);
+    --glow-star: 0 0 20px hsl(200 100% 88% / 0.8);
+
+    /* Smooth Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+    background: var(--gradient-soft);
+    min-height: 100vh;
+  }
+}
+
+/* Beautiful Birthday Animations */
+@layer utilities {
+  .bg-gradient-birthday {
+    background: var(--gradient-birthday);
+  }
+  
+  .bg-gradient-soft {
+    background: var(--gradient-soft);
+  }
+  
+  .bg-gradient-cake {
+    background: var(--gradient-cake);
+  }
+  
+  .bg-gradient-surprise {
+    background: var(--gradient-surprise);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .glow-birthday {
+    box-shadow: var(--glow-birthday);
+  }
+  
+  .glow-star {
+    box-shadow: var(--glow-star);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
+
+/* Floating Animation Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(-3deg); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes balloonRise {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes cakeGlow {
+  0%, 100% { box-shadow: 0 0 20px hsl(45 100% 85% / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(45 100% 85% / 0.8), 0 0 60px hsl(330 100% 90% / 0.6); }
+}
+
+@keyframes firework {
+  0% { transform: scale(0) rotate(0deg); opacity: 1; }
+  50% { transform: scale(1) rotate(180deg); opacity: 1; }
+  100% { transform: scale(1.5) rotate(360deg); opacity: 0; }
+}
+
+@keyframes nameGlow {
+  0%, 100% { 
+    text-shadow: 0 0 10px hsl(330 100% 85% / 0.5), 
+                 0 0 20px hsl(280 60% 88% / 0.3),
+                 0 0 30px hsl(200 100% 88% / 0.2);
+    transform: scale(1);
+  }
+  50% { 
+    text-shadow: 0 0 20px hsl(330 100% 85% / 0.8), 
+                 0 0 40px hsl(280 60% 88% / 0.6),
+                 0 0 60px hsl(200 100% 88% / 0.4);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes candleFlicker {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1) drop-shadow(0 0 5px hsl(45 100% 85% / 0.3));
+  }
+  25% { 
+    transform: scale(1.05) rotate(1deg);
+    filter: brightness(1.1) drop-shadow(0 0 8px hsl(45 100% 85% / 0.5));
+  }
+  50% { 
+    transform: scale(0.98) rotate(-1deg);
+    filter: brightness(0.9) drop-shadow(0 0 6px hsl(45 100% 85% / 0.4));
+  }
+  75% { 
+    transform: scale(1.02) rotate(0.5deg);
+    filter: brightness(1.05) drop-shadow(0 0 7px hsl(45 100% 85% / 0.45));
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { 
+    background-position: 0% 50%;
+  }
+  50% { 
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { 
+    transform: translateY(0px);
+  }
+  50% { 
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes heartFloat {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.7;
+  }
+  50% { 
+    transform: translateY(-25px) rotate(10deg) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes teddyBearBounce {
+  0%, 100% { 
+    transform: translateY(0px) rotate(-5deg);
+  }
+  25% { 
+    transform: translateY(-15px) rotate(5deg);
+  }
+  50% { 
+    transform: translateY(-25px) rotate(-3deg);
+  }
+  75% { 
+    transform: translateY(-15px) rotate(3deg);
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: transparent; }
+  51%, 100% { border-color: hsl(345 100% 90%); }
+}
+
+@keyframes heartExplosion {
+  0% { 
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.5) rotate(180deg);
+    opacity: 0.8;
+  }
+  100% { 
+    transform: scale(3) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes romanticGlow {
+  0%, 100% { 
+    box-shadow: 0 0 20px hsl(345 100% 90% / 0.4), 
+                0 0 40px hsl(280 60% 90% / 0.3),
+                0 0 60px hsl(30 100% 92% / 0.2);
+  }
+  50% { 
+    box-shadow: 0 0 30px hsl(345 100% 90% / 0.6), 
+                0 0 60px hsl(280 60% 90% / 0.5),
+                0 0 90px hsl(30 100% 92% / 0.4);
+  }
+}
+
+@keyframes giftBoxShake {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(-3deg); }
+  20% { transform: rotate(3deg); }
+  30% { transform: rotate(-2deg); }
+  40% { transform: rotate(2deg); }
+  50% { transform: rotate(-1deg); }
+  60% { transform: rotate(1deg); }
+}
+
+/* Animation Classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.animate-confetti {
+  animation: confettiFall 3s linear infinite;
+}
+
+.animate-balloon {
+  animation: balloonRise 8s linear infinite;
+}
+
+.animate-heartbeat {
+  animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+.animate-cake-glow {
+  animation: cakeGlow 2s ease-in-out infinite;
+}
+
+.animate-firework {
+  animation: firework 1s ease-out;
+}
+
+.animate-name-glow {
+  animation: nameGlow 3s ease-in-out infinite;
+}
+
+.animate-candle-flicker {
+  animation: candleFlicker 2s ease-in-out infinite;
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounceGentle 2s ease-in-out infinite;
+}
+
+.animate-heart-float {
+  animation: heartFloat 3s ease-in-out infinite;
+}
+
+.animate-teddy-bounce {
+  animation: teddyBearBounce 2.5s ease-in-out infinite;
+}
+
+.animate-typing {
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  border-right: 3px solid;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.animate-heart-explosion {
+  animation: heartExplosion 1s ease-out forwards;
+}
+
+.animate-romantic-glow {
+  animation: romanticGlow 2s ease-in-out infinite;
+}
+
+.animate-gift-shake {
+  animation: giftBoxShake 0.5s ease-in-out infinite;
+}
+
+/* Additional utility classes */
+.bg-gradient-romantic {
+  background: var(--gradient-romantic);
+}
+
+.bg-gradient-love {
+  background: var(--gradient-love);
+}
+
+.font-romantic {
+  font-family: 'Sacramento', cursive;
+}
+
+.font-playful {
+  font-family: 'Pacifico', cursive;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .text-8xl {
+    font-size: 3rem;
+  }
+  
+  .text-6xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-5xl {
+    font-size: 2rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.75rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+  
+  .min-h-screen {
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+  }
+  
+  /* Reduce animation intensity on mobile for better performance */
+  .animate-float,
+  .animate-float-slow,
+  .animate-heart-float,
+  .animate-teddy-bounce {
+    animation-duration: 4s;
+  }
+  
+  /* Adjust floating elements for mobile */
+  .fixed.top-0.left-0 .absolute {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-8xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-6xl {
+    font-size: 2rem;
+  }
+  
+  .text-5xl {
+    font-size: 1.75rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.25rem;
+  }
+  
+  /* Reduce floating elements on very small screens */
+  .fixed.top-0.left-0 .absolute {
+    font-size: 1.25rem;
+    opacity: 0.7;
+  }
+}
+
+/* Touch-friendly button sizing */
+@media (hover: none) and (pointer: coarse) {
+  button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .bg-gradient-romantic,
+  .bg-gradient-love,
+  .bg-gradient-birthday {
+    background: hsl(var(--primary));
+  }
+  
+  .text-transparent {
+    color: hsl(var(--foreground));
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .animate-float,
+  .animate-float-slow,
+  .animate-heart-float,
+  .animate-teddy-bounce,
+  .animate-twinkle,
+  .animate-heartbeat,
+  .animate-bounce-gentle,
+  .animate-romantic-glow,
+  .animate-candle-flicker,
+  .animate-name-glow,
+  .animate-gradient-shift,
+  .animate-firework,
+  .animate-heart-explosion,
+  .animate-gift-shake,
+  .animate-balloon,
+  .animate-confetti {
+    animation: none !important;
+  }
+}
