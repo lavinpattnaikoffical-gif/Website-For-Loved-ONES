@@ -29,7 +29,9 @@ export const BirthdayWebsite = () => {
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-soft">
       {/* Floating Background Animations */}
-      <FloatingAnimations />
+      {!(currentSection === 'surprise' && showSurprise) && (
+        <FloatingAnimations />
+      )}
       
       {/* Background Music Controls */}
       <BackgroundMusic />

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Progress } from '@/components/ui/progress';
 import cakeImage from '@/assets/birthday-cake.jpg';
 import fireworksImage from '@/assets/fireworks.jpg';
 
@@ -34,7 +35,7 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
       id: 'gift1',
       emoji: '🎁',
       title: 'Special Gift Box',
-      message: 'This gift box contains all my love for you! Every day with you is a gift, and I treasure every moment we share together. You make my world brighter just by being in it! 💕',
+      message: 'I hope this brings you as much joy as you bring me! Every day I get to spend with you is a gift I treasure. Thank you for making my world so much brighter! 💕',
       x: 20,
       y: 30,
       animationDelay: '0s'
@@ -43,7 +44,7 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
       id: 'doll1',
       emoji: '🧸',
       title: 'Teddy Bear Love',
-      message: 'Like this teddy bear, I want to be your comfort and joy forever. You\'re the sweetest person I know, and I promise to always be there to give you warm hugs and make you smile! 🧸💖',
+      message: 'Like this teddy bear, I want to be your comfort and joy forever. You\'re the sweetest person I know, and I promise to always be there to brighten your day! 🧸💖',
       x: 60,
       y: 20,
       animationDelay: '0.5s'
@@ -52,7 +53,7 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
       id: 'heart1',
       emoji: '💕',
       title: 'Heart of Hearts',
-      message: 'My heart beats only for you! You\'ve captured my heart completely, and every day I fall more in love with you. You\'re my soulmate, my best friend, and my everything! 💕✨',
+      message: "You're truly one of a kind! You have such a special place in my heart, and every day I'm more grateful for our friendship. You're my best friend, and you mean the world to me! 💕✨",
       x: 80,
       y: 60,
       animationDelay: '1s'
@@ -61,7 +62,7 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
       id: 'gift2',
       emoji: '🎀',
       title: 'Romantic Surprise',
-      message: 'This surprise is wrapped with all my love! You deserve the world and more. Every day I wake up grateful that you chose me to be your partner in this beautiful journey called life! 🌹💝',
+      message: 'Consider this surprise wrapped in all the love my heart holds! You deserve the entire universe. Every morning is a reminder of how lucky I am to be walking this beautiful path of life with you. 🌹💝',
       x: 30,
       y: 70,
       animationDelay: '1.5s'
@@ -79,7 +80,7 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
       id: 'heart2',
       emoji: '💖',
       title: 'Eternal Love',
-      message: 'My love for you is eternal and endless! Through all the seasons of life, through every up and down, my love for you will always remain constant and true. Forever and always! 💖🌙',
+      message: "My love for you is eternal and endless! Through all the seasons of life, through My friendship and support for you are endless! Through all the seasons of life, through every up and down, you can count on me to be there. I'll always be constant and true. Forever and always! 💖🌙",
       x: 50,
       y: 80,
       animationDelay: '2.5s'
@@ -98,13 +99,25 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
   return (
     <div className="min-h-screen py-16 px-4 flex items-center justify-center relative overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
+        {/* Always-visible section heading */}
+        <h2 className="text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-4 transition-transform duration-300 hover:scale-105">
+          🎁 Romantic Surprises 🎁
+        </h2>
+
         {!showSurprise ? (
-          <div className="animate-fade-in">
-            <h2 className="text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-8">
-              🎁 Romantic Surprises 🎁
-            </h2>
-            <p className="text-xl text-muted-foreground mb-12">
-              Click on the surprises to discover sweet messages just for you! 💕
+          <div className="animate-fade-in relative">
+            {/* Soft floating background accents */}
+            <div className="pointer-events-none absolute inset-0 -z-10">
+              <div className="absolute top-6 left-8 text-4xl opacity-30 animate-float-slow">💕</div>
+              <div className="absolute top-10 right-12 text-3xl opacity-30 animate-twinkle">✨</div>
+              <div className="absolute bottom-8 left-16 text-4xl opacity-30 animate-bounce-gentle">🎀</div>
+              <div className="absolute bottom-10 right-10 text-4xl opacity-30 animate-float-slow">🧸</div>
+            </div>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-3 font-romantic">
+              Tap the floating gifts to reveal sweet secrets, one by one! 💞
+            </p>
+            <p className="text-sm md:text-base text-primary/80 mb-12 font-poppins">
+              Each surprise holds a tiny piece of my heart. Open them all to unlock a bonus wish ✨
             </p>
             
             <Button 
@@ -113,15 +126,24 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
               onClick={() => setShowSurprise(true)}
               className="text-2xl px-12 py-6 h-auto font-playful animate-romantic-glow"
             >
-              💕 Open My Heart's Surprises 💕
+              💕 Open Your Heart's Surprises 💕
             </Button>
           </div>
         ) : (
           <div className="animate-scale-in">
+            <div className="mb-4" />
             <div className="mb-8 animate-fade-in">
-              <h2 className="text-4xl md:text-5xl font-romantic text-primary mb-6 animate-twinkle">
+              <h2 className="text-4xl md:text-5xl font-romantic text-primary mb-3 transition-transform duration-300 hover:scale-105">
                 ✨ Click on the surprises below ✨
               </h2>
+              {/* Progress Indicator */}
+              <div className="max-w-xl mx-auto">
+                <div className="flex items-center justify-between mb-2 text-sm font-poppins">
+                  <span className="text-muted-foreground">Surprises opened</span>
+                  <span className="text-primary font-medium">{openedSurprises.size}/{surpriseItems.length}</span>
+                </div>
+                <Progress value={(openedSurprises.size / surpriseItems.length) * 100} />
+              </div>
             </div>
             
             {/* Interactive Surprise Items */}
@@ -131,9 +153,9 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
                   key={surprise.id}
                   onClick={() => handleSurpriseClick(surprise)}
                   className={`absolute text-6xl transition-all duration-300 hover:scale-125 ${
-                    openedSurprises.has(surprise.id) 
-                      ? 'animate-heart-explosion opacity-50' 
-                      : 'animate-bounce-gentle hover:animate-gift-shake'
+                    openedSurprises.has(surprise.id)
+                      ? 'opacity-50'
+                      : ''
                   }`}
                   style={{
                     left: `${surprise.x}%`,
@@ -149,7 +171,7 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
             </div>
 
             {/* Birthday Cake Section */}
-            <Card className="bg-gradient-cake p-8 shadow-card animate-cake-glow mb-8 relative overflow-hidden">
+            <Card className="bg-gradient-cake p-8 shadow-card mb-8 relative overflow-hidden">
               <h3 className="text-2xl font-romantic text-primary mb-4">🎂 Make a Wish! 🎂</h3>
               <div 
                 className="w-48 h-48 mx-auto rounded-full bg-cover bg-center shadow-soft mb-4"
@@ -177,9 +199,22 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
               </div>
             </div>
             
+            {/* Bonus unlock when all opened */}
+            {openedSurprises.size === surpriseItems.length && (
+              <Card className="bg-gradient-love p-6 shadow-card animate-romantic-glow mb-8">
+                <div className="text-center">
+                  <div className="text-4xl mb-2 animate-heartbeat">💖</div>
+                  <h4 className="text-2xl font-romantic text-primary mb-2">Bonus Wish Unlocked</h4>
+                  <p className="text-lg text-foreground font-poppins">
+                    You opened every surprise! Make a special wish and keep it in your heart.
+                  </p>
+                </div>
+              </Card>
+            )}
+
             <div className="animate-fade-in" style={{ animationDelay: '1s' }}>
               <p className="text-2xl text-primary mb-8 animate-heartbeat font-romantic">
-                Hope all your wishes come true, my love! 🌟
+                Hope all your wishes come true! 🌟
               </p>
               
               <Button 
@@ -188,7 +223,7 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
                 onClick={onNext}
                 className="text-xl px-8 py-4 h-auto font-playful"
               >
-                💌 Continue to Love Letter 💌
+                💌 Continue to Birthday Messages 💌
               </Button>
             </div>
           </div>
@@ -222,3 +257,5 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
     </div>
   );
 };
+
+

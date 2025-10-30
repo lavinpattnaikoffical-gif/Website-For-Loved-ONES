@@ -17,7 +17,7 @@ export const EndingSection: React.FC<EndingSectionProps> = ({ onReplay }) => {
             <h2 className="text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-6">
               Thank you for being YOU, my love
             </h2>
-            <h3 className="text-3xl md:text-4xl font-romantic text-primary mb-8 animate-twinkle">
+            <h3 className="text-3xl md:text-4xl font-romantic text-primary mb-8 animate-typing overflow-hidden whitespace-nowrap transform transition-all duration-300 hover:scale-105 hover:bg-gradient-birthday hover:bg-clip-text hover:text-transparent">
               Happy Birthday once again! 🎉
             </h3>
           </div>

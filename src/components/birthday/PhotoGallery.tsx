@@ -9,45 +9,92 @@ interface PhotoGalleryProps {
 export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
   const [currentPhotoIndex, setCurrentPhotoIndex] = React.useState(0);
   
-  const photoPlaceholders = [
-    { 
-      caption: "Our First Date 💕", 
-      placeholder: "Replace with: first-date-photo.jpg",
-      description: "The day our love story began..."
+  // Place these files under: public/photos/
+  const photos = [
+    {
+      image: '/photos/yellow-dress.jpg',
+      caption: "Sunshine In Yellow 🌼",
+      description: "That glow in your favorite yellow dress"
     },
-    { 
-      caption: "Sweetest Smile 😊", 
-      placeholder: "Replace with: beautiful-smile-photo.jpg",
-      description: "Your smile that lights up my world"
+    {
+      image: '/photos/pink-top-selfie.jpg',
+      caption: "Sweetest Selfie 💗",
+      description: "Your smile lights up everything"
     },
-    { 
-      caption: "Funny Moment Together 😂", 
-      placeholder: "Replace with: funny-memory-photo.jpg",
-      description: "That hilarious moment we shared"
+    {
+      image: '/photos/sunglasses-couple.jpg',
+      caption: "Cool Together 😎",
+      description: "Sunglasses on, love mode on"
     },
-    { 
-      caption: "Unforgettable Day 🌟", 
-      placeholder: "Replace with: special-day-photo.jpg",
-      description: "A day I'll never forget"
+    {
+      image: '/photos/pink-saree.jpg',
+      caption: "Pretty In Pink ✨",
+      description: "Elegance in a pink saree"
     },
-    { 
-      caption: "Adventure Time 🚀", 
-      placeholder: "Replace with: adventure-photo.jpg",
-      description: "Our exciting adventures together"
+    {
+      image: '/photos/bench-night.jpg',
+      caption: "Starry Night Stroll 🌙",
+      description: "Calm moments under fairy lights"
     },
-    { 
-      caption: "Just Because You're Beautiful 🌸", 
-      placeholder: "Replace with: beautiful-moment-photo.jpg",
-      description: "Any moment that shows how amazing you are"
+    {
+      image: '/photos/temple-selfie.jpg',
+      caption: "Blessed Smiles 🙏",
+      description: "A divine day captured perfectly"
     },
+    {
+      image: '/photos/mall-ganesha.jpg',
+      caption: "With Bappa's Blessings 🪔",
+      description: "Cute pose by Lord Ganesha"
+    },
+    {
+      image: '/photos/grey-gown-night.jpg',
+      caption: "Moonlit Glamour 🌌",
+      description: "You shining brighter than the lights"
+    },
+    {
+      image: '/photos/farewell-stage.jpg',
+      // Try multiple extensions just in case the file is .jpeg/.png/.webp or uppercase
+      candidates: [
+        '/photos/farewell-stage.jpg',
+        '/photos/farewell-stage.jpeg',
+        '/photos/farewell-stage.png',
+        '/photos/farewell-stage.webp',
+        '/photos/farewell-stage.JPG',
+        '/photos/farewell-stage.JPEG',
+        '/photos/farewell-stage.PNG',
+        '/photos/farewell-stage.WEBP'
+      ],
+      caption: "Stage Star ⭐",
+      description: "Farewell memories to cherish"
+    }
   ];
 
+  // Track the currently chosen src per photo (to allow fallback onError)
+  const [currentSrcs, setCurrentSrcs] = React.useState(
+    photos.map((p: any) => p.image)
+  );
+
+  const handleImageError = () => {
+    const photo: any = photos[currentPhotoIndex] as any;
+    const candidates: string[] = photo.candidates || [photo.image];
+    const currentSrc = currentSrcs[currentPhotoIndex];
+    const pos = candidates.indexOf(currentSrc);
+    const nextSrc = pos >= 0 && pos < candidates.length - 1
+      ? candidates[pos + 1]
+      : '/placeholder.svg';
+    setCurrentSrcs((prev) => {
+      const next = [...prev];
+      next[currentPhotoIndex] = nextSrc;
+      return next;
+    });
+  };
+
   const nextPhoto = () => {
-    setCurrentPhotoIndex((prev) => (prev + 1) % photoPlaceholders.length);
+    setCurrentPhotoIndex((prev) => (prev + 1) % photos.length);
   };
 
   const prevPhoto = () => {
-    setCurrentPhotoIndex((prev) => (prev - 1 + photoPlaceholders.length) % photoPlaceholders.length);
+    setCurrentPhotoIndex((prev) => (prev - 1 + photos.length) % photos.length);
   };
 
   return (
@@ -66,15 +113,19 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
         <div className="relative max-w-4xl mx-auto mb-16">
           <Card className="bg-gradient-romantic p-8 shadow-card animate-romantic-glow overflow-hidden">
             <div className="relative">
-              {/* Main Photo Display */}
-              <div className="aspect-square bg-gradient-soft border-4 border-primary/30 rounded-2xl flex items-center justify-center relative mb-6 overflow-hidden">
-                <div className="text-center p-8">
-                  <div className="text-8xl mb-6 animate-heartbeat">📷</div>
-                  <p className="text-lg text-muted-foreground mb-4 font-romantic">
-                    {photoPlaceholders[currentPhotoIndex].placeholder}
-                  </p>
-                  <p className="text-sm text-muted-foreground italic">
-                    {photoPlaceholders[currentPhotoIndex].description}
+              {/* Main Photo Display (smaller to avoid upscaling/pixelation) */}
+              <div className="mx-auto w-72 h-72 md:w-96 md:h-96 bg-gradient-soft border-4 border-primary/30 rounded-2xl flex items-center justify-center relative mb-6 overflow-hidden">
+                <img 
+                  src={currentSrcs[currentPhotoIndex]} 
+                  alt={photos[currentPhotoIndex].caption}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover select-none"
+                  onError={handleImageError}
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/30 text-white p-3 text-center">
+                  <p className="text-sm italic">
+                    {photos[currentPhotoIndex].description}
                   </p>
                 </div>
                 
@@ -88,7 +139,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
               {/* Photo Info */}
               <div className="text-center mb-6">
                 <h3 className="font-romantic text-3xl text-primary mb-2">
-                  {photoPlaceholders[currentPhotoIndex].caption}
+                  {photos[currentPhotoIndex].caption}
                 </h3>
               </div>
               
@@ -104,7 +155,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
                 
                 {/* Photo Dots */}
                 <div className="flex gap-2">
-                  {photoPlaceholders.map((_, index) => (
+                  {photos.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentPhotoIndex(index)}
@@ -136,7 +187,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
             onClick={onNext}
             className="text-xl px-8 py-4 h-auto font-playful"
           >
-            💕 Continue to Love Messages 💕
+            Just For You !!!💕
           </Button>
         </div>
       </div>

@@ -12,27 +12,18 @@ export const BirthdayMessages: React.FC<BirthdayMessagesProps> = ({ onNext }) =>
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
 
   const loveMessages = [
-    "My dearest love,",
+    "Pawni! Pawni! Pawni!",
+    "",    
+    "On this special day, I just have to tell you how incredibly special you are to me.",
+    "You are the light that brightens my cloudy days and the comfort in my darkest nights.",
+    "Your smile is genuinely one of the most beautiful sights in the world, and your laughter is a sound I could listen to forever.",
+    "Every moment we share is a gift I hold onto. Being your friend has made me a better person in so many ways.",
+    "Your kindness, your spirit, your unbelievably good heart... I admire everything about you more than you know.",
+    "I promise to always be your biggest cheerleader, to cherish our adventures and our quiet moments alike.",
+    "You are my truest friend, and our bond means the world to me.",
+    "Happy Birthday, my beautiful girl. May your dreams come true and may our bond grow stronger with every year.",
     "",
-    "On this special day, I want to tell you how much you mean to me.",
-    "You are the sunshine in my cloudy days, the stars in my darkest nights.",
-    "Your smile is the most beautiful thing I've ever seen,",
-    "and your laughter is the sweetest music to my ears.",
-    "",
-    "Every day with you is a gift I treasure.",
-    "You make me a better person just by being in my life.",
-    "Your kindness, your beauty, your amazing heart...",
-    "everything about you makes me fall in love with you more and more.",
-    "",
-    "I promise to love you through all the seasons of life,",
-    "through every adventure and every quiet moment.",
-    "You are my soulmate, my best friend, and my everything.",
-    "",
-    "Happy Birthday, my beautiful angel!",
-    "May all your dreams come true and may our love",
-    "continue to grow stronger with each passing day.",
-    "",
-    "Forever yours, with all my love 💕"
+    "With so much love, 💕"
   ];
 
   useEffect(() => {
@@ -71,7 +62,7 @@ export const BirthdayMessages: React.FC<BirthdayMessagesProps> = ({ onNext }) =>
           <h2 className="text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-6">
             💌 My Love Letter to You 💌
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-2xl md:text-3xl text-muted-foreground [font-family:'Beautyful',cursive]">
             A special message from my heart to yours... 💕
           </p>
         </div>
@@ -93,7 +84,7 @@ export const BirthdayMessages: React.FC<BirthdayMessagesProps> = ({ onNext }) =>
             {/* Typing Animation */}
             <div className="bg-white/90 rounded-lg p-6 shadow-inner min-h-[400px] flex items-center justify-center">
               <div className="text-left w-full">
-                <pre className="font-romantic text-lg text-foreground leading-relaxed whitespace-pre-wrap">
+                <pre className="font-romantic text-xl md:text-2xl text-foreground leading-relaxed whitespace-pre-wrap">
                   {displayedText}
                   {isTyping && <span className="animate-pulse">|</span>}
                 </pre>
@@ -111,7 +102,7 @@ export const BirthdayMessages: React.FC<BirthdayMessagesProps> = ({ onNext }) =>
             <div className="text-center">
               <div className="text-4xl mb-4 animate-heartbeat">💖</div>
               <p className="text-lg font-medium text-foreground leading-relaxed font-poppins">
-                "You are my today and all of my tomorrows."
+                "You are So Special to me. 💕"
               </p>
             </div>
           </Card>
@@ -120,7 +111,7 @@ export const BirthdayMessages: React.FC<BirthdayMessagesProps> = ({ onNext }) =>
             <div className="text-center">
               <div className="text-4xl mb-4 animate-twinkle">🌟</div>
               <p className="text-lg font-medium text-foreground leading-relaxed font-poppins">
-                "In you, I found my forever and always."
+                "Happy Birthday to the one who is so special to me. 💕"
               </p>
             </div>
           </Card>

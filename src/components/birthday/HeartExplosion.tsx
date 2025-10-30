@@ -33,7 +33,8 @@ export const HeartExplosion: React.FC<HeartExplosionProps> = ({ className }) => 
         variant="surprise"
         size="lg"
       >
-        💕 You Mean the World to Me 💕
+        💕  I tried to make something for you, hope you like it  💕
+                            (Click to see)
       </Button>
 
       {/* Heart Explosion Animation */}
@@ -61,22 +62,20 @@ export const HeartExplosion: React.FC<HeartExplosionProps> = ({ className }) => 
         <DialogContent className="bg-gradient-love border-primary/30 max-w-md">
           <DialogHeader>
             <DialogTitle className="text-3xl font-romantic text-primary text-center flex items-center justify-center gap-2">
-              💕 You Mean the World to Me 💕
+              💕 💕 So Grateful For You 💕 💖 To my amazing friend, Pawni! 💕 💖
             </DialogTitle>
           </DialogHeader>
           <div className="py-6 text-center">
             <div className="text-6xl mb-4 animate-heartbeat">💖</div>
             <div className="space-y-4">
               <p className="text-lg text-foreground leading-relaxed font-poppins">
-                My darling, you are my everything! 🌟
+              Every day of our friendship is a blessing! Every moment is precious, and every dream includes you. 🌟
               </p>
               <p className="text-base text-foreground leading-relaxed font-romantic">
-                Every day with you is a blessing,
-                every moment is precious,
-                and every dream includes you.
+              I'm so incredibly lucky to have you in my life.
               </p>
               <p className="text-lg text-foreground font-playful animate-bounce-gentle">
-                I love you more than words can say! 💕
+              So Lucky to Know You 💕
               </p>
             </div>
             

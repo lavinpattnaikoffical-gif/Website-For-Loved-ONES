@@ -1,10 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 
 export const BackgroundMusic: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.5);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
@@ -15,19 +13,14 @@ export const BackgroundMusic: React.FC = () => {
           // Handle autoplay restrictions
           console.log('Autoplay blocked by browser');
         });
+        setIsPlaying(true);
       }
       document.removeEventListener('click', handleFirstClick);
     };
 
     document.addEventListener('click', handleFirstClick);
     return () => document.removeEventListener('click', handleFirstClick);
-  }, []);
-
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume;
-    }
-  }, [volume]);
+  }, [isPlaying]);
 
   const togglePlayPause = () => {
     if (audioRef.current) {
@@ -42,79 +35,17 @@ export const BackgroundMusic: React.FC = () => {
     }
   };
 
-  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newVolume = parseFloat(e.target.value);
-    setVolume(newVolume);
-  };
-
   return (
-    <div className="fixed top-4 right-4 z-50">
-      <Card className="bg-gradient-romantic p-4 shadow-card animate-romantic-glow backdrop-blur-sm">
-        <div className="flex flex-col items-center gap-3">
-          {/* Music Icon */}
-          <div className="text-2xl animate-heartbeat">
-            {isPlaying ? '🎵' : '🔇'}
-          </div>
-          
-          {/* Play/Pause Button */}
-          <Button
-            onClick={togglePlayPause}
-            variant="secondary"
-            size="sm"
-            className="rounded-full w-10 h-10 p-0 animate-bounce-gentle"
-          >
-            {isPlaying ? '⏸️' : '▶️'}
-          </Button>
-          
-          {/* Volume Control */}
-          <div className="flex items-center gap-2 w-full">
-            <span className="text-xs text-muted-foreground">🔊</span>
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.1"
-              value={volume}
-              onChange={handleVolumeChange}
-              className="flex-1 h-1 bg-primary/20 rounded-lg appearance-none cursor-pointer slider"
-              style={{
-                background: `linear-gradient(to right, hsl(var(--primary)) 0%, hsl(var(--primary)) ${volume * 100}%, hsl(var(--primary) / 0.2) ${volume * 100}%, hsl(var(--primary) / 0.2) 100%)`
-              }}
-            />
-            <span className="text-xs text-muted-foreground">{Math.round(volume * 100)}%</span>
-          </div>
-          
-          {/* Music Info */}
-          <div className="text-center">
-            <p className="text-xs text-muted-foreground font-romantic">
-              Romantic Background Music
-            </p>
-            <p className="text-xs text-muted-foreground">
-              {/* TODO: Replace with your romantic music file */}
-              <em>Add your favorite romantic song here</em>
-            </p>
-          </div>
-        </div>
-      </Card>
-      
-      {/* Hidden Audio Element */}
-      <audio
-        ref={audioRef}
-        loop
-        preload="auto"
-        onPlay={() => setIsPlaying(true)}
-        onPause={() => setIsPlaying(false)}
-        onEnded={() => setIsPlaying(false)}
+    <div className="fixed right-4 bottom-4 z-50">
+      <audio ref={audioRef} loop src="/music/romantic-melody.mp3" />
+      <Button
+        onClick={togglePlayPause}
+        variant="secondary"
+        size="sm"
+        className="rounded-full w-10 h-10 p-0 shadow-card hover:scale-105 transition-all duration-300 bg-gradient-romantic"
       >
-        {/* TODO: Replace with your romantic music file */}
-        {/* 
-        <source src="/path/to/your/romantic-song.mp3" type="audio/mpeg" />
-        <source src="/path/to/your/romantic-song.ogg" type="audio/ogg" />
-        */}
-        <p className="text-xs text-muted-foreground p-2">
-          Your browser does not support the audio element.
-        </p>
-      </audio>
+        {isPlaying ? '🎵' : '🔇'}
+      </Button>
     </div>
   );
 };

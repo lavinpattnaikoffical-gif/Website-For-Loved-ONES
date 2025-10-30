@@ -67,7 +67,7 @@ export const BirthdayQuiz: React.FC<BirthdayQuizProps> = ({ onNext }) => {
         <Card className="bg-card/90 backdrop-blur-sm p-8 shadow-card animate-scale-in">
           {!showResult ? (
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-primary animate-twinkle">
+              <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-primary transform transition-all duration-300 hover:scale-105 hover:bg-gradient-birthday hover:bg-clip-text hover:text-transparent cursor-pointer hover:shadow-lg p-4 rounded-lg">
                 {questions[currentQuestion].question}
               </h3>
               
