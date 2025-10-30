@@ -2,18 +2,37 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
 export const BackgroundMusic: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  // Get initial state from localStorage or default to true
+  const [isPlaying, setIsPlaying] = useState(() => {
+    const saved = localStorage.getItem('bgMusicPlaying');
+    return saved !== null ? JSON.parse(saved) : true;
+  });
   const audioRef = useRef<HTMLAudioElement>(null);
 
+  // Save playing state to localStorage whenever it changes
   useEffect(() => {
-    // Auto-play when component mounts (with user interaction)
-    const handleFirstClick = () => {
-      if (audioRef.current && !isPlaying) {
+    localStorage.setItem('bgMusicPlaying', JSON.stringify(isPlaying));
+  }, [isPlaying]);
+
+  useEffect(() => {
+    // Try to play automatically when component mounts
+    const playMusic = () => {
+      if (audioRef.current && isPlaying) {
         audioRef.current.play().catch(() => {
-          // Handle autoplay restrictions
-          console.log('Autoplay blocked by browser');
+          console.log('Autoplay blocked by browser - waiting for user interaction');
         });
-        setIsPlaying(true);
+      }
+    };
+
+    // Try immediate autoplay
+    playMusic();
+
+    // Set up click handler for browsers that block autoplay
+    const handleFirstClick = () => {
+      if (audioRef.current && isPlaying) {
+        audioRef.current.play().catch(() => {
+          console.log('Could not play audio');
+        });
       }
       document.removeEventListener('click', handleFirstClick);
     };
