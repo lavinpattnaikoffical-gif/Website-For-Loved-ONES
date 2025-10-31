@@ -10,35 +10,36 @@ interface EndingSectionProps {
 export const EndingSection: React.FC<EndingSectionProps> = ({ onReplay }) => {
   return (
     <div className="min-h-screen py-8 sm:py-16 px-4 flex items-center justify-center relative overflow-hidden">
-      <div className="max-w-4xl mx-auto text-center w-full">
+      <div className="max-w-sm sm:max-w-4xl mx-auto text-center w-full relative z-10">
         <div className="animate-fade-in">
           <div className="mb-6 sm:mb-8">
-            <div className="text-6xl sm:text-8xl mb-4 sm:mb-6 animate-heartbeat">💕</div>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-4 sm:mb-6 px-2">
+            <div className="text-5xl sm:text-8xl mb-4 sm:mb-6 animate-heartbeat">💕</div>
+            <h2 className="text-2xl sm:text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-4 sm:mb-6 px-2 leading-tight">
               Thank you for being YOU, my love
             </h2>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-romantic text-primary mb-6 sm:mb-8 animate-typing overflow-hidden whitespace-nowrap transform transition-all duration-300 hover:scale-105 hover:bg-gradient-birthday hover:bg-clip-text hover:text-transparent px-2">
+            <h3 className="text-xl sm:text-3xl md:text-4xl font-romantic text-primary mb-6 sm:mb-8 px-2 leading-relaxed">
               Happy Birthday once again! 🎉
             </h3>
           </div>
           
-          <Card className="bg-gradient-love p-4 sm:p-8 shadow-card mb-8 sm:mb-12 backdrop-blur-sm animate-romantic-glow mx-2">
-            <p className="text-lg sm:text-xl md:text-2xl text-foreground leading-relaxed font-poppins">
+          <Card className="bg-gradient-love/95 p-4 sm:p-8 shadow-card mb-8 sm:mb-12 backdrop-blur-sm animate-romantic-glow mx-auto max-w-xs sm:max-w-2xl">
+            <p className="text-base sm:text-xl md:text-2xl text-foreground leading-relaxed font-poppins">
               I hope this little birthday website brought a smile to your beautiful face! 😊
-              <span className="block my-2">You're absolutely amazing, and I'm so grateful to have you in my life. 🌟</span>
+              <span className="block my-3">You're absolutely amazing, and I'm so grateful to have you in my life. 🌟</span>
               <span className="block">Here's to another year of wonderful memories, adventures, and endless love together! 🥳💕</span>
             </p>
           </Card>
           
-          <div className="space-y-4 sm:space-y-6 px-2">
-            {/* Heart Explosion Button */}
-            <HeartExplosion className="text-base sm:text-xl px-6 sm:px-12 py-4 sm:py-6 h-auto w-full sm:w-auto" />
+          <div className="space-y-4 sm:space-y-6 px-2 max-w-xs sm:max-w-md mx-auto">
+            <p className="text-sm sm:text-base text-muted-foreground font-romantic italic">
+              I tried to make something for you, hope you like it 💝
+            </p>
             
             <Button 
               variant="birthday" 
               size="lg" 
               onClick={onReplay}
-              className="text-base sm:text-xl px-6 sm:px-12 py-4 sm:py-6 h-auto font-playful animate-romantic-glow w-full sm:w-auto"
+              className="text-sm sm:text-base px-4 sm:px-8 py-3 sm:py-4 h-auto font-playful animate-romantic-glow w-full shadow-lg hover:scale-105 transition-all duration-300"
             >
               💕 Experience the Magic Again 💕
             </Button>
@@ -47,16 +48,16 @@ export const EndingSection: React.FC<EndingSectionProps> = ({ onReplay }) => {
       </div>
       
       {/* Extra floating romantic elements for the ending */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(25)].map((_, i) => (
+      <div className="fixed inset-0 pointer-events-none z-0">
+        {[...Array(15)].map((_, i) => (
           <div
             key={`ending-heart-${i}`}
-            className="absolute text-3xl animate-heart-float opacity-60"
+            className="absolute text-xl sm:text-2xl animate-heart-float opacity-40"
             style={{
-              top: `${10 + (i * 3) % 80}%`,
-              left: `${5 + (i * 6) % 90}%`,
-              animationDelay: `${i * 0.2}s`,
-              animationDuration: `${3 + i * 0.1}s`
+              top: `${15 + (i * 5) % 70}%`,
+              left: `${10 + (i * 8) % 85}%`,
+              animationDelay: `${i * 0.3}s`,
+              animationDuration: `${4 + i * 0.2}s`
             }}
           >
             {i % 5 === 0 ? '💖' : i % 5 === 1 ? '💕' : i % 5 === 2 ? '🌸' : i % 5 === 3 ? '✨' : '🧸'}
