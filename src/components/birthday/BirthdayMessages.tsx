@@ -44,13 +44,18 @@ export const BirthdayMessages: React.FC<BirthdayMessagesProps> = ({ onNext }) =>
   }, []);
 
   const handleNext = () => {
+    // If still typing, show full text immediately
+    const fullText = loveMessages.join('\n');
+    setDisplayedText(fullText);
+    setIsTyping(false);
+    
+    // Add a small delay before proceeding if we're skipping the typing
     if (isTyping) {
-      // If still typing, show full text immediately
-      const fullText = loveMessages.join('\n');
-      setDisplayedText(fullText);
-      setIsTyping(false);
+      setTimeout(() => {
+        onNext();
+      }, 500); // Give 500ms to see the complete message
     } else {
-      // If done typing, proceed to next section
+      // If already done typing, proceed immediately
       onNext();
     }
   };

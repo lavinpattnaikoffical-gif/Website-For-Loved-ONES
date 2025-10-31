@@ -7,8 +7,6 @@ interface PhotoGalleryProps {
 }
 
 export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
-  const [currentPhotoIndex, setCurrentPhotoIndex] = React.useState(0);
-  
   // Place these files under: public/photos/
   const photos = [
     {
@@ -70,9 +68,22 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
   ];
 
   // Track the currently chosen src per photo (to allow fallback onError)
+  const [currentPhotoIndex, setCurrentPhotoIndex] = React.useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = React.useState(true);
   const [currentSrcs, setCurrentSrcs] = React.useState(
     photos.map((p: any) => p.image)
   );
+
+  // Auto-slide functionality
+  React.useEffect(() => {
+    if (!isAutoPlaying) return;
+    
+    const timer = setInterval(() => {
+      setCurrentPhotoIndex((prev) => (prev + 1) % photos.length);
+    }, 3000); // Change slide every 3 seconds
+    
+    return () => clearInterval(timer);
+  }, [isAutoPlaying, photos.length]);
 
   const handleImageError = () => {
     const photo: any = photos[currentPhotoIndex] as any;
@@ -120,7 +131,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
                   alt={photos[currentPhotoIndex].caption}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover select-none"
+                  className="w-full h-full object-cover select-none transition-all duration-500 ease-in-out"
                   onError={handleImageError}
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/30 text-white p-3 text-center">
@@ -154,18 +165,28 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
                 </Button>
                 
                 {/* Photo Dots */}
-                <div className="flex gap-2">
+                <div className="flex gap-3 items-center">
                   {photos.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentPhotoIndex(index)}
-                      className={`w-3 h-3 rounded-full transition-smooth ${
+                      className={`w-4 h-4 rounded-full transition-all duration-300 ${
                         index === currentPhotoIndex 
-                          ? 'bg-primary animate-heartbeat' 
-                          : 'bg-primary/30 hover:bg-primary/60'
+                          ? 'bg-gradient-romantic shadow-glow scale-125 animate-pulse-soft' 
+                          : 'bg-primary/20 hover:bg-primary/40 hover:scale-110'
                       }`}
+                      title={`Photo ${index + 1}`}
                     />
                   ))}
+                  <Button
+                    onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                    variant="secondary"
+                    size="sm"
+                    className="rounded-full w-8 h-8 p-0 ml-2"
+                    title={isAutoPlaying ? "Pause slideshow" : "Play slideshow"}
+                  >
+                    {isAutoPlaying ? '⏸️' : '▶️'}
+                  </Button>
                 </div>
                 
                 <Button 
