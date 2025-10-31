@@ -46,7 +46,7 @@ export const EndingSection: React.FC<EndingSectionProps> = ({ onReplay }) => {
             <p className="text-xl md:text-2xl text-foreground leading-relaxed font-poppins">
               I hope this little birthday website brought a smile to your beautiful face! 😊<br />
               You're absolutely amazing, and I'm so grateful to have you in my life. 🌟<br />
-              Here's to another year of wonderful memories, adventures, and endless love together! 🥳💕
+              Here's to another year of wonderful memories, adventures, and joy together! 🥳💕
             </p>
           </Card>
           
