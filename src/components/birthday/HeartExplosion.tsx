@@ -98,7 +98,7 @@ export const HeartExplosion: React.FC<HeartExplosionProps> = ({ className }) => 
               className="font-playful animate-romantic-glow"
               variant="secondary"
             >
-              💕 Always be my friend.... 💕
+              💕 Always for you, Pawni!.... 💕
             </Button>
           </div>
         </DialogContent>
