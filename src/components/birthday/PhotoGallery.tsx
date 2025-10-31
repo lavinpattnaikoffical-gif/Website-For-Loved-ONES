@@ -22,7 +22,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
     {
       image: '/photos/sunglasses-couple.jpg',
       caption: "Cool Together 😎",
-      description: "Sunglasses on, love mode on"
+      description: "Sunglasses on, vibes on point"
     },
     {
       image: '/photos/pink-saree.jpg',
@@ -113,10 +113,10 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-6">
-            📸 Our Memories 📸
+            📸 Your Beautiful Memories 📸
           </h2>
           <p className="text-xl text-muted-foreground">
-            Here are our most precious memories together!
+            Here are your most precious memories together! 💕
           </p>
         </div>
         
