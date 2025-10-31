@@ -65,7 +65,7 @@ export const BirthdayMessages: React.FC<BirthdayMessagesProps> = ({ onNext }) =>
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-6">
-            💌 My Love Letter to You 💌
+            💌 My Message to You 💌
           </h2>
           <p className="text-2xl md:text-3xl text-muted-foreground [font-family:'Beautyful',cursive]">
             A special message from my heart to yours... 💕

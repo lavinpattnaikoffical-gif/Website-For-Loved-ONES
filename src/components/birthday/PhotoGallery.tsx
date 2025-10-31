@@ -113,10 +113,10 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-6">
-            📸 Our Love Story 📸
+            📸 Our Memories 📸
           </h2>
           <p className="text-xl text-muted-foreground">
-            Here are our most precious memories together! 💕
+            Here are our most precious memories together!
           </p>
         </div>
         
