@@ -83,7 +83,7 @@ export const BirthdayMessages: React.FC<BirthdayMessagesProps> = ({ onNext }) =>
           <div className="relative z-10">
             <div className="text-center mb-6">
               <div className="text-4xl animate-heartbeat mb-4">💝</div>
-              <h3 className="text-2xl font-romantic text-primary mb-4">A Letter From My Heart</h3>
+              <h3 className="text-2xl font-romantic text-primary mb-4 font-bold tracking-wide">A Letter From My Heart</h3>
             </div>
             
             {/* Typing Animation */}
