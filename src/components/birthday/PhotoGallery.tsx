@@ -7,63 +7,47 @@ interface PhotoGalleryProps {
 }
 
 export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
-  // Place these files under: public/photos/
+  // PHOTOS (Open-source friendly sample)
+  // <- Edit this array to add/remove images and change captions/descriptions.
+  // <- Place your images in: public/photos/
+  // <- Each item supports:
+  //     - image: primary src (string)
+  //     - caption: shown title (string)
+  //     - description: shown subtitle (string)
+  //     - candidates: optional array of fallback sources tried in order onError
+  // Example: { image: '/photos/sample1.jpg', caption: 'Sample 1', description: 'Edit me', candidates: ['/photos/sample1.webp'] }
   const photos = [
     {
-      image: '/photos/yellow-dress.jpg',
-      caption: "Sunshine In Yellow 🌼",
-      description: "That glow in your favorite yellow dress"
+      image: '/photos/sample1.jpg',
+      caption: 'Sample Photo 1',
+      description: 'Replace this with a short description',
+      candidates: ['/photos/sample1.webp', '/photos/sample1@2x.jpg']
     },
     {
-      image: '/photos/pink-top-selfie.jpg',
-      caption: "Sweetest Selfie 💗",
-      description: "Your smile lights up everything"
+      image: '/photos/sample2.jpg',
+      caption: 'Sample Photo 2',
+      description: 'Replace this with a short description',
+      candidates: ['/photos/sample2.webp']
     },
     {
-      image: '/photos/sunglasses-couple.jpg',
-      caption: "Cool Together 😎",
-      description: "Sunglasses on, vibes on point"
+      image: '/photos/sample3.jpg',
+      caption: 'Sample Photo 3',
+      description: 'Replace this with a short description'
     },
     {
-      image: '/photos/pink-saree.jpg',
-      caption: "Pretty In Pink ✨",
-      description: "Elegance in a pink saree"
+      image: '/photos/sample4.jpg',
+      caption: 'Sample Photo 4',
+      description: 'Replace this with a short description'
     },
     {
-      image: '/photos/bench-night.jpg',
-      caption: "Starry Night Stroll 🌙",
-      description: "Calm moments under fairy lights"
+      image: '/photos/sample5.jpg',
+      caption: 'Sample Photo 5',
+      description: 'Replace this with a short description'
     },
     {
-      image: '/photos/temple-selfie.jpg',
-      caption: "Blessed Smiles 🙏",
-      description: "A divine day captured perfectly"
-    },
-    {
-      image: '/photos/mall-ganesha.jpg',
-      caption: "With Bappa's Blessings 🪔",
-      description: "Cute pose by Lord Ganesha"
-    },
-    {
-      image: '/photos/grey-gown-night.jpg',
-      caption: "Moonlit Glamour 🌌",
-      description: "You shining brighter than the lights"
-    },
-    {
-      image: '/photos/farewell-stage.jpg',
-      // Try multiple extensions just in case the file is .jpeg/.png/.webp or uppercase
-      candidates: [
-        '/photos/farewell-stage.jpg',
-        '/photos/farewell-stage.jpeg',
-        '/photos/farewell-stage.png',
-        '/photos/farewell-stage.webp',
-        '/photos/farewell-stage.JPG',
-        '/photos/farewell-stage.JPEG',
-        '/photos/farewell-stage.PNG',
-        '/photos/farewell-stage.WEBP'
-      ],
-      caption: "Stage Star ⭐",
-      description: "Farewell memories to cherish"
+      image: '/photos/sample6.jpg',
+      caption: 'Sample Photo 6',
+      description: 'Replace this with a short description'
     }
   ];
 

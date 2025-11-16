@@ -12,7 +12,7 @@ export const BirthdayMessages: React.FC<BirthdayMessagesProps> = ({ onNext }) =>
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
 
   const loveMessages = [
-    "Pawni! Pawni! Pawni!",
+    "Name! Name! Name!",
     "",    
     "On this special day, I just have to tell you how incredibly special you are to me.",
     "You are the light that brightens my cloudy days and the comfort in my darkest nights.",

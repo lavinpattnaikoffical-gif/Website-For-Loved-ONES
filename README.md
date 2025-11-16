@@ -1,78 +1,63 @@
-<<<<<<< HEAD
-# Birthday-file
-For someone Special.
-=======
-# Welcome to your Lovable project
+# Website-For-Loved-ONES
 
-## Project info
+A small React + TypeScript (Vite) project that renders a birthday-themed interactive website. Designed to be easy to customize and reuse, the project includes UI components, an image gallery, simple animations, and hooks for common behaviors.
 
-**URL**: https://lovable.dev/projects/f76a9c3b-1b9d-497b-8a8d-dff9d3ecded6
+Purpose
+- Provide a friendly, easy-to-edit template for creating personalized greeting pages or small celebrations websites.
+- Demonstrate reusable component patterns, simple animations, and static asset handling in a Vite + React + TypeScript setup.
 
-## How can I edit this code?
+Key features
+- Photo gallery/carousel with auto-play, manual controls and image fallbacks.
+- Reusable UI primitives (buttons, cards) and theme-friendly styles.
+- Lightweight animations and decorative elements for a celebratory look.
+- Simple build and development scripts via Vite.
 
-There are several ways of editing your application.
+Quick start
+```powershell
+# install dependencies
+npm install
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/f76a9c3b-1b9d-497b-8a8d-dff9d3ecded6) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# run dev server
 npm run dev
+
+# build for production
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+Tech stack
+- React + TypeScript
+- Vite (dev server + build)
+- Tailwind (or similar utility styling - adjust in project if different)
+- Minimal runtime dependencies (see package.json)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Project layout
+- public/ : static assets (images, music, robots.txt, placeholder.svg). Put gallery images under public/photos/.
+- src/ : application source
+  - src/components/ : UI components and feature components (birthday gallery, buttons, cards)
+  - src/pages/ : top-level pages and routing
+  - src/hooks/ : reusable hooks
+  - src/lib/ : utilities and helpers
+  - src/assets/ : imported static assets used by the app
+- package.json, vite.config.ts, tsconfig.json : build and tooling configuration
 
-**Use GitHub Codespaces**
+Customizing the gallery
+- Images: place your photos in public/photos/ (e.g. public/photos/sample1.jpg).
+- The gallery component reads an array of photo objects (image, caption, description). Edit src/components/birthday/PhotoGallery.tsx to change sample entries, captions, and add fallback "candidates" if needed.
+- Keep a placeholder.svg in public/ as a final fallback image.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Contributing
+- Fork the repo, create a feature branch, and open a pull request.
+- Keep changes focused and document new files or major refactors in the PR description.
+- If you find any remaining references to project-generation tools or internal names you want removed, search the repo for those terms and propose replacements in your PR.
 
-## What technologies are used for this project?
+Notes for open-source use
+- This project is intentionally generic and meant for easy customization. Replace sample content (text, images, audio) with licensed or personal assets before publishing.
+- Verify third-party licenses of any assets you add.
 
-This project is built with:
+License
+- Add a LICENSE file appropriate to your intentions (MIT is a common choice for templates).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f76a9c3b-1b9d-497b-8a8d-dff9d3ecded6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
->>>>>>> d3bdf82 (Its Me To)
+If you want, I can:
+- update the gallery samples to include placeholder sample images,
+- add a CONTRIBUTING.md,
+- or remove specific unwanted strings across the repository (provide the exact term).

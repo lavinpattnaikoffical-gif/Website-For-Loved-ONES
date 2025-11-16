@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 
 // Create a singleton audio instance
-const audio = typeof Audio !== 'undefined' ? new Audio('/music/romantic-melody.mp3') : null;
+const audio = typeof Audio !== 'undefined' ? new Audio('/music/websitebackgroundsong.mp3') : null;
 if (audio) {
   audio.loop = true;
 }
