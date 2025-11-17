@@ -29,9 +29,9 @@ export const HeartExplosion: React.FC<HeartExplosionProps> = ({ className }) => 
       {/* Heart Explosion Button */}
       <Button
         onClick={triggerHeartExplosion}
-        className={`${className} font-playful animate-romantic-glow hover:scale-110 transition-all duration-300 text-xl px-12 py-6 h-auto w-full md:w-auto bg-gradient-romantic text-foreground shadow-card`}
-        variant="romantic"
+        variant="birthday"
         size="lg"
+        className="text-xl px-12 py-6 h-auto font-playful animate-romantic-glow backdrop-blur-sm relative w-full"
       >
         <span style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕💕</span> I tried to make something for you, hope you like it <span style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span> (Click to see)
       </Button>
