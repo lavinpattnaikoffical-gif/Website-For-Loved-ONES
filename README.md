@@ -1,6 +1,6 @@
 # Website-For-Loved-ONES 💕
 
-A beautiful, romantic, and interactive birthday website built with React + TypeScript (Vite). This project creates a personalized, love-filled celebration experience with vibrant gradients, cute animations, and heartfelt messages.
+A beautiful, romantic, and interactive celebration website built with React + TypeScript (Vite). This project creates a personalized, love-filled celebration experience with vibrant gradients, cute animations, and heartfelt messages - perfect for any special occasion!
 
 ## Live Demo
 
@@ -8,7 +8,7 @@ A beautiful, romantic, and interactive birthday website built with React + TypeS
 
 ## Purpose
 
-- Create a romantic, personalized birthday greeting website filled with love, happiness, and cute elements
+- Create a romantic, personalized celebration website filled with love, happiness, and cute elements for any special occasion
 - Provide an easy-to-customize template for creating special celebration pages
 - Demonstrate beautiful gradient text effects, emoji decorations, and smooth animations
 
@@ -18,7 +18,7 @@ A beautiful, romantic, and interactive birthday website built with React + TypeS
 - **Photo Gallery**: Interactive carousel with auto-play, manual controls, and image fallbacks
 - **Love Letter Section**: Typing animation for personalized messages with romantic styling
 - **Interactive Surprises**: Clickable gift boxes and surprises with progress tracking
-- **Birthday Quiz**: Fun interactive quiz component
+- **Celebration Quiz**: Fun interactive quiz component
 - **Heart Explosion**: Special heart explosion animation with popup messages
 - **Background Music**: Optional background music player
 - **Floating Animations**: Hearts, stars, teddy bears, and sparkles floating across the screen
@@ -47,7 +47,7 @@ npm run build
 Project layout
 - public/ : static assets (images, music, robots.txt, placeholder.svg). Put gallery images under public/photos/.
 - src/ : application source
-  - src/components/ : UI components and feature components (birthday gallery, buttons, cards)
+  - src/components/ : UI components and feature components (celebration gallery, buttons, cards)
   - src/pages/ : top-level pages and routing
   - src/hooks/ : reusable hooks
   - src/lib/ : utilities and helpers
@@ -59,7 +59,7 @@ Project layout
 ### Personalizing Content
 
 1. **Name Replacement**: Search for "Name!" throughout the codebase and replace with the recipient's name
-2. **Messages**: Edit `src/components/birthday/BirthdayMessages.tsx` to customize the love letter content
+2. **Messages**: Edit `src/components/birthday/CelebrationMessages.tsx` to customize the love letter content
 3. **Photos**: 
    - Place your photos in `public/photos/` (e.g., `public/photos/sample1.jpg`)
    - Edit `src/components/birthday/PhotoGallery.tsx` to update photo entries, captions, and descriptions
@@ -83,17 +83,17 @@ Project layout
 
 ## Sections
 
-1. **Welcome Section**: Hero greeting with animated birthday message
+1. **Welcome Section**: Hero greeting with animated celebration message
 2. **Photo Gallery**: Interactive memory slideshow
-3. **Birthday Messages**: Love letter with typing animation
+3. **Celebration Messages**: Love letter with typing animation
 4. **Romantic Surprises**: Interactive gift boxes with messages
-5. **Birthday Quiz**: Fun quiz about the birthday person
+5. **Celebration Quiz**: Fun quiz about the special person
 6. **Ending Section**: Thank you message with replay option
 
 ## Notes
 
 - Replace all "Name!" placeholders with the actual recipient's name
 - Add your own photos to `public/photos/`
-- Customize messages in `BirthdayMessages.tsx`
+- Customize messages in `CelebrationMessages.tsx`
 - The site uses emoji font fallback to ensure proper rendering across all devices
 - Open Graph meta tags are configured for beautiful social media previews

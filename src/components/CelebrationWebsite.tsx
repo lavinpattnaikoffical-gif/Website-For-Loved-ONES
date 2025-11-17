@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { WelcomeSection } from './birthday/WelcomeSection';
 import { PhotoGallery } from './birthday/PhotoGallery';
-import { BirthdayMessages } from './birthday/BirthdayMessages';
+import { CelebrationMessages } from './birthday/CelebrationMessages';
 import { SurpriseSection } from './birthday/SurpriseSection';
-import { BirthdayQuiz } from './birthday/BirthdayQuiz';
+import { CelebrationQuiz } from './birthday/CelebrationQuiz';
 import { EndingSection } from './birthday/EndingSection';
 import { FloatingAnimations } from './birthday/FloatingAnimations';
 import { BackgroundMusic } from './birthday/BackgroundMusic';
 
-export const BirthdayWebsite = () => {
+export const CelebrationWebsite = () => {
   const [currentSection, setCurrentSection] = useState<string>('welcome');
   const [showSurprise, setShowSurprise] = useState(false);
 
@@ -47,7 +47,7 @@ export const BirthdayWebsite = () => {
         )}
         
         {currentSection === 'messages' && (
-          <BirthdayMessages onNext={goToNextSection} />
+          <CelebrationMessages onNext={goToNextSection} />
         )}
         
         {currentSection === 'surprise' && (
@@ -59,7 +59,7 @@ export const BirthdayWebsite = () => {
         )}
         
         {currentSection === 'quiz' && (
-          <BirthdayQuiz onNext={goToNextSection} />
+          <CelebrationQuiz onNext={goToNextSection} />
         )}
         
         {currentSection === 'ending' && (

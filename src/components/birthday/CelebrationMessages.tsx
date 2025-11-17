@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
-interface BirthdayMessagesProps {
+interface CelebrationMessagesProps {
   onNext: () => void;
 }
 
-export const BirthdayMessages: React.FC<BirthdayMessagesProps> = ({ onNext }) => {
+export const CelebrationMessages: React.FC<CelebrationMessagesProps> = ({ onNext }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);

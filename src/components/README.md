@@ -1,11 +1,11 @@
 # src/components
 
-Contains all React components used by the romantic birthday website.
+Contains all React components used by the romantic celebration website.
 
 ## Structure
 
 ### Main Component
-- **`BirthdayWebsite.tsx`** - Top-level component that orchestrates all birthday sections and manages navigation between them
+- **`CelebrationWebsite.tsx`** - Top-level component that orchestrates all celebration sections and manages navigation between them
 
 ### Feature Components (`birthday/`)
 All birthday-specific feature components with romantic styling:
@@ -13,7 +13,7 @@ All birthday-specific feature components with romantic styling:
 - Photo gallery with interactive carousel
 - Love letter with typing animation
 - Interactive surprises section
-- Birthday quiz
+- Celebration quiz
 - Ending/thank you section
 - Supporting animations and music controls
 
@@ -21,7 +21,7 @@ See `birthday/README.md` for detailed component descriptions.
 
 ### UI Components (`ui/`)
 Collection of reusable UI primitives based on Radix UI and shadcn/ui:
-- Buttons with romantic variants (birthday, surprise, cake, romantic, love)
+- Buttons with romantic variants (celebration, surprise, cake, romantic, love)
 - Cards with gradient backgrounds
 - Dialogs, sheets, popovers for modals
 - Form inputs and other common UI patterns

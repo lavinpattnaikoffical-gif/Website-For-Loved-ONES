@@ -36,7 +36,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onStart }) => {
               letterSpacing: '0.02em'
             }}>
               <span className="inline-block animate-pulse mr-3" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
-              Happy Birthday, Name!
+              Happy Celebration, Name!
               <span className="inline-block animate-pulse ml-3" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
             </h1>
             
@@ -73,7 +73,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onStart }) => {
         </div>
         
         <Button 
-          variant="birthday" 
+          variant="celebration" 
           size="lg" 
           onClick={onStart}
           className="text-2xl px-12 py-6 h-auto font-playful animate-romantic-glow"

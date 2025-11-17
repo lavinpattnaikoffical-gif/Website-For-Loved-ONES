@@ -4,7 +4,7 @@ Static assets imported and bundled by the application (images, icons, etc.).
 
 ## Current Assets
 
-- **`birthday-cake.jpg`** - Birthday cake image used in the SurpriseSection component
+- **`birthday-cake.jpg`** - Celebration cake image used in the SurpriseSection component
 - **`fireworks.jpg`** - Fireworks background image for celebration effects
 - **`birthday-hero.jpg`** - Hero/banner image used in WelcomeSection background
   - Also copied to `public/og-image.jpg` for social media previews

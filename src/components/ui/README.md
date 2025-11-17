@@ -6,7 +6,7 @@ This folder contains reusable UI primitives and component wrappers based on Radi
 
 ### Interactive Elements
 - **`button.tsx`** - Styled button component with romantic variants:
-  - `birthday` - Gradient birthday theme
+  - `celebration` - Gradient celebration theme
   - `surprise` - Surprise theme with heartbeat animation
   - `cake` - Cake theme
   - `romantic` - Romantic gradient theme

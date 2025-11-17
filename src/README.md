@@ -1,6 +1,6 @@
 # src (Source Code)
 
-This folder contains all the application source code for the romantic birthday website.
+This folder contains all the application source code for the romantic celebration website.
 
 ## Structure
 
@@ -12,7 +12,7 @@ This folder contains all the application source code for the romantic birthday w
 - **`vite-env.d.ts`** - Vite TypeScript environment type definitions
 
 ### Core Directories
-- **`components/`** - All React components (birthday features + UI primitives)
+- **`components/`** - All React components (celebration features + UI primitives)
 - **`pages/`** - Route/page components (Index, NotFound)
 - **`assets/`** - Static images and media (birthday-cake.jpg, fireworks.jpg, birthday-hero.jpg)
 - **`hooks/`** - Custom React hooks (use-mobile, use-toast)

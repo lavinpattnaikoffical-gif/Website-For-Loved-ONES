@@ -49,13 +49,13 @@ export const EndingSection: React.FC<EndingSectionProps> = ({ onReplay }) => {
               <span className="inline-block animate-pulse ml-2" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
             </h2>
             <h3 className="text-3xl md:text-4xl font-romantic text-primary mb-8 animate-typing overflow-hidden whitespace-nowrap transform transition-all duration-300 hover:scale-105">
-              Happy Birthday once again! <span style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>🎉</span>
+              Happy Celebration once again! <span style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>🎉</span>
             </h3>
           </div>
           
           <Card className="bg-gradient-love/95 p-8 shadow-card mb-12 backdrop-blur-md animate-romantic-glow relative">
             <p className="text-xl md:text-2xl text-foreground leading-relaxed font-poppins">
-              I hope this little birthday website brought a smile to your beautiful face! 😊<br />
+              I hope this little celebration website brought a smile to your beautiful face! 😊<br />
               You're absolutely amazing, and I'm so grateful to have you in my life. 🌟<br />
               Here's to another year of wonderful memories, adventures, and joy together! 🥳💕
             </p>
@@ -66,7 +66,7 @@ export const EndingSection: React.FC<EndingSectionProps> = ({ onReplay }) => {
             <HeartExplosion />
             
             <Button 
-              variant="birthday" 
+              variant="celebration" 
               size="lg" 
               onClick={onReplay}
               className="text-xl px-12 py-6 h-auto font-playful animate-romantic-glow backdrop-blur-sm relative w-full"

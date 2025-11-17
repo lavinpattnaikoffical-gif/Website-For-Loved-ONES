@@ -29,7 +29,7 @@ export const HeartExplosion: React.FC<HeartExplosionProps> = ({ className }) => 
       {/* Heart Explosion Button */}
       <Button
         onClick={triggerHeartExplosion}
-        variant="birthday"
+        variant="celebration"
         size="lg"
         className="text-xl px-12 py-6 h-auto font-playful animate-romantic-glow backdrop-blur-sm relative w-full"
       >

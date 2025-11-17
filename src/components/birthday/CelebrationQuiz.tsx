@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
-interface BirthdayQuizProps {
+interface CelebrationQuizProps {
   onNext: () => void;
 }
 
-export const BirthdayQuiz: React.FC<BirthdayQuizProps> = ({ onNext }) => {
+export const CelebrationQuiz: React.FC<CelebrationQuizProps> = ({ onNext }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState<string>('');

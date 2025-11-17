@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Birthday Website Design System - Soft pastels and cute animations */
+/* Celebration Website Design System - Soft pastels and cute animations */
 
 @layer base {
   :root {
@@ -58,7 +58,7 @@
     --radius: 1rem;
 
     /* Beautiful Romantic Gradients */
-    --gradient-birthday: linear-gradient(135deg, hsl(345 100% 90%), hsl(280 60% 90%), hsl(30 100% 92%));
+    --gradient-celebration: linear-gradient(135deg, hsl(345 100% 90%), hsl(280 60% 90%), hsl(30 100% 92%));
     --gradient-soft: linear-gradient(180deg, hsl(320 100% 98%), hsl(280 100% 96%), hsl(50 100% 96%));
     --gradient-cake: linear-gradient(45deg, hsl(45 100% 85%), hsl(345 100% 90%));
     --gradient-surprise: radial-gradient(circle, hsl(345 100% 90%), hsl(280 60% 90%));
@@ -68,7 +68,7 @@
     /* Shadows & Glows */
     --shadow-soft: 0 4px 20px hsl(330 100% 85% / 0.3);
     --shadow-card: 0 8px 30px hsl(280 60% 88% / 0.2);
-    --glow-birthday: 0 0 30px hsl(330 100% 85% / 0.6);
+    --glow-celebration: 0 0 30px hsl(330 100% 85% / 0.6);
     --glow-star: 0 0 20px hsl(200 100% 88% / 0.8);
 
     /* Smooth Transitions */
@@ -145,10 +145,10 @@
   }
 }
 
-/* Beautiful Birthday Animations */
+/* Beautiful Celebration Animations */
 @layer utilities {
-  .bg-gradient-birthday {
-    background: var(--gradient-birthday);
+  .bg-gradient-celebration {
+    background: var(--gradient-celebration);
   }
   
   .bg-gradient-soft {
@@ -171,8 +171,8 @@
     box-shadow: var(--shadow-card);
   }
   
-  .glow-birthday {
-    box-shadow: var(--glow-birthday);
+  .glow-celebration {
+    box-shadow: var(--glow-celebration);
   }
   
   .glow-star {
@@ -534,7 +534,7 @@
 @media (prefers-contrast: high) {
   .bg-gradient-romantic,
   .bg-gradient-love,
-  .bg-gradient-birthday {
+  .bg-gradient-celebration {
     background: hsl(var(--primary));
   }
   

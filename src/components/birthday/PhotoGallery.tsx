@@ -210,7 +210,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
         
         <div className="text-center">
           <Button 
-            variant="birthday" 
+            variant="celebration" 
             size="lg" 
             onClick={onNext}
             className="text-xl px-8 py-4 h-auto font-playful"

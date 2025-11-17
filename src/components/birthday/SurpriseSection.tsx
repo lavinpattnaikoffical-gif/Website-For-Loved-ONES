@@ -191,7 +191,7 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
               ))}
             </div>
 
-            {/* Birthday Cake Section */}
+            {/* Celebration Cake Section */}
             <Card className="bg-gradient-cake p-8 shadow-card mb-8 relative overflow-hidden">
               <h3 className="text-2xl font-romantic text-primary mb-4">🎂 Make a Wish! 🎂</h3>
               <div 
@@ -244,7 +244,7 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
                 onClick={onNext}
                 className="text-xl px-8 py-4 h-auto font-playful"
               >
-                💌 Continue to Birthday Messages 💌
+                💌 Continue to Special Messages 💌
               </Button>
             </div>
           </div>
