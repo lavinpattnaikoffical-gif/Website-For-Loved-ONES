@@ -26,15 +26,18 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onStart }) => {
             <div className="absolute -bottom-4 -right-4 text-4xl animate-twinkle" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>⭐</div>
             
             <h1 className="text-6xl md:text-8xl font-playful relative z-10 animate-bounce-gentle" style={{ 
-              color: '#d63384',
-              textShadow: '0 3px 25px rgba(214, 51, 132, 0.5), 0 0 40px rgba(214, 51, 132, 0.3)',
+              background: 'linear-gradient(135deg, #ff6b9d, #c44569, #ba68c8, #9c27b0)',
+              backgroundSize: '200% 200%',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              animation: 'gradientShift 3s ease infinite',
+              filter: 'drop-shadow(0 2px 15px rgba(255, 107, 157, 0.4))',
               letterSpacing: '0.02em'
             }}>
-              <span className="inline-block animate-pulse" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
-              <span className="mx-4">
+              <span className="inline-block animate-pulse mr-3" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
               Happy Birthday, Name!
-              </span>
-              <span className="inline-block animate-pulse" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
+              <span className="inline-block animate-pulse ml-3" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
             </h1>
             
             {/* Sparkle effects */}

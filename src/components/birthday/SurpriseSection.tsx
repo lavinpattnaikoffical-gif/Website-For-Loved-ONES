@@ -106,13 +106,22 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
           <div className="absolute -top-2 right-1/4 text-2xl animate-twinkle opacity-70" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>✨</div>
           <div className="absolute -bottom-2 left-1/3 text-2xl animate-float opacity-75" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>🎀</div>
           <div className="absolute -bottom-2 right-1/3 text-2xl animate-heartbeat opacity-80" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💖</div>
+          <div className="absolute -top-6 left-1/3 text-2xl animate-twinkle opacity-75" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>🎊</div>
+          <div className="absolute -bottom-4 right-1/4 text-2xl animate-float opacity-70" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💗</div>
           
           <h2 className="text-5xl md:text-6xl font-playful mb-4 transition-transform duration-300 hover:scale-105 relative z-10" style={{ 
-            color: '#d63384',
-            textShadow: '0 2px 20px rgba(214, 51, 132, 0.4), 0 0 30px rgba(214, 51, 132, 0.2)',
+            background: 'linear-gradient(135deg, #ff6b9d, #c44569, #ba68c8, #9c27b0)',
+            backgroundSize: '200% 200%',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            animation: 'gradientShift 3s ease infinite',
+            filter: 'drop-shadow(0 2px 15px rgba(255, 107, 157, 0.4))',
             letterSpacing: '0.02em'
           }}>
+            <span className="inline-block animate-pulse mr-2" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>🎁</span>
             Romantic Surprises
+            <span className="inline-block animate-pulse ml-2" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>🎁</span>
           </h2>
         </div>
 

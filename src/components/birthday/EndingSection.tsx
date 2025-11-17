@@ -35,11 +35,18 @@ export const EndingSection: React.FC<EndingSectionProps> = ({ onReplay }) => {
           <div className="mb-8">
             <div className="text-8xl mb-6 animate-heartbeat" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</div>
             <h2 className="text-5xl md:text-6xl font-playful mb-6 relative z-10" style={{ 
-              color: '#d63384',
-              textShadow: '0 2px 20px rgba(214, 51, 132, 0.4), 0 0 30px rgba(214, 51, 132, 0.2)',
+              background: 'linear-gradient(135deg, #ff6b9d, #c44569, #ba68c8, #9c27b0)',
+              backgroundSize: '200% 200%',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              animation: 'gradientShift 3s ease infinite',
+              filter: 'drop-shadow(0 2px 15px rgba(255, 107, 157, 0.4))',
               letterSpacing: '0.02em'
             }}>
+              <span className="inline-block animate-pulse mr-2" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
               Thank you for being my amazing Friend
+              <span className="inline-block animate-pulse ml-2" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
             </h2>
             <h3 className="text-3xl md:text-4xl font-romantic text-primary mb-8 animate-typing overflow-hidden whitespace-nowrap transform transition-all duration-300 hover:scale-105">
               Happy Birthday once again! <span style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>🎉</span>
