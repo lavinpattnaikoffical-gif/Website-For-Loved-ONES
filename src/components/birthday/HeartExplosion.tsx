@@ -62,7 +62,7 @@ export const HeartExplosion: React.FC<HeartExplosionProps> = ({ className }) => 
         <DialogContent className="bg-gradient-love border-primary/30 max-w-md">
           <DialogHeader>
             <DialogTitle className="text-3xl font-romantic text-primary text-center flex items-center justify-center gap-2">
-              💕 💕 So Grateful For You 💕 💖 To my amazing friend, Pawni! 💕 💖
+              💕 💕 So Grateful For You 💕 💖 To my amazing friend, Name! 💕 💖
             </DialogTitle>
           </DialogHeader>
           <div className="py-6 text-center">
@@ -98,7 +98,7 @@ export const HeartExplosion: React.FC<HeartExplosionProps> = ({ className }) => 
               className="font-playful animate-romantic-glow"
               variant="secondary"
             >
-              💕 Always for you, Pawni!.... 💕
+              💕 Always for you, Name!.... 💕
             </Button>
           </div>
         </DialogContent>

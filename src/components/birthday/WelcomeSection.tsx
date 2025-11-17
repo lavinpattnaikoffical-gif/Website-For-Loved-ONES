@@ -28,7 +28,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onStart }) => {
             <h1 className="text-6xl md:text-8xl font-playful bg-gradient-romantic bg-clip-text text-transparent glow-birthday relative z-10 animate-bounce-gentle">
               <span className="inline-block animate-pulse">💕</span>
               <span className="mx-4 bg-gradient-to-r from-pink-400 via-rose-400 to-lavender-400 bg-clip-text text-transparent animate-gradient-shift">
-              Happy Birthday, Pawni! 
+              Happy Birthday, Name!
               </span>
               <span className="inline-block animate-pulse">💕</span>
             </h1>
@@ -53,15 +53,15 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onStart }) => {
           </div>
           
           <h2 className="text-4xl md:text-6xl font-romantic text-primary mb-8 animate-name-glow">
-            {/* TODO: Replace with your girlfriend's name */}
-            A Celebration for Pawni!
+            {/* TODO: Replace with the recipient's name */}
+            A Celebration for Name!
           </h2>
         </div>
         
         <div className="animate-float-slow mb-12">
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-          This page is all about celebrating YOU, Pawni! ✨<br />
-          Get ready for a fantastic journey through our best memories, fun surprises, and a whole lot of appreciation.💕
+          This page is all about celebrating YOU, Name! ✨<br />
+          Get ready for a fantastic journey through your best memories, fun surprises, and a whole lot of appreciation.💕
           </p>
         </div>
         

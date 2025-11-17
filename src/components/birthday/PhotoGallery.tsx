@@ -25,32 +25,32 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
     },
     {
       image: '/photos/sunglasses-couple.jpg',
-      caption: "Cool Together 😎",
-      description: "Sunglasses on, vibes on point"
+      caption: 'Sample Photo 2',
+      description: 'Replace this with a short description'
     },
     {
       image: '/photos/pink-saree.jpg',
-      caption: "Pretty In Pink ✨",
-      description: "Elegance in a pink saree"
-    },
-    {
-      image: '/photos/sample3.jpg',
       caption: 'Sample Photo 3',
       description: 'Replace this with a short description'
     },
     {
-      image: '/photos/sample4.jpg',
+      image: '/photos/sample3.jpg',
       caption: 'Sample Photo 4',
       description: 'Replace this with a short description'
     },
     {
-      image: '/photos/sample5.jpg',
+      image: '/photos/sample4.jpg',
       caption: 'Sample Photo 5',
       description: 'Replace this with a short description'
     },
     {
-      image: '/photos/sample6.jpg',
+      image: '/photos/sample5.jpg',
       caption: 'Sample Photo 6',
+      description: 'Replace this with a short description'
+    },
+    {
+      image: '/photos/sample6.jpg',
+      caption: 'Sample Photo 7',
       description: 'Replace this with a short description'
     }
   ];
