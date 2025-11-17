@@ -53,7 +53,7 @@ export const BirthdayQuiz: React.FC<BirthdayQuizProps> = ({ onNext }) => {
     <div className="min-h-screen py-16 px-4 flex items-center justify-center">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-birthday bg-clip-text text-transparent mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-birthday bg-clip-text text-transparent mb-6" style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
             🎮 Birthday Quiz 🎮
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -67,7 +67,7 @@ export const BirthdayQuiz: React.FC<BirthdayQuizProps> = ({ onNext }) => {
         <Card className="bg-card/90 backdrop-blur-sm p-8 shadow-card animate-scale-in">
           {!showResult ? (
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-primary transform transition-all duration-300 hover:scale-105 hover:bg-gradient-birthday hover:bg-clip-text hover:text-transparent cursor-pointer hover:shadow-lg p-4 rounded-lg">
+              <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-primary transform transition-all duration-300 hover:scale-105 cursor-pointer hover:shadow-lg p-4 rounded-lg">
                 {questions[currentQuestion].question}
               </h3>
               

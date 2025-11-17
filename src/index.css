@@ -444,6 +444,24 @@
   background: var(--gradient-love);
 }
 
+/* Ensure gradient text is always visible with fallback */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Fallback for browsers that don't support background-clip */
+@supports not (-webkit-background-clip: text) {
+  .bg-clip-text {
+    color: hsl(var(--primary));
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+  }
+}
+
 .font-romantic {
   font-family: 'Sacramento', cursive;
 }

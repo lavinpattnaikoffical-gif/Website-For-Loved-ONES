@@ -100,7 +100,7 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
     <div className="min-h-screen py-16 px-4 flex items-center justify-center relative overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
         {/* Always-visible section heading */}
-        <h2 className="text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-4 transition-transform duration-300 hover:scale-105">
+        <h2 className="text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-4 transition-transform duration-300 hover:scale-105" style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
           🎁 Romantic Surprises 🎁
         </h2>
 
