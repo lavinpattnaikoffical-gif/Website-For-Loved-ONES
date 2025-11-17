@@ -53,9 +53,25 @@ export const BirthdayQuiz: React.FC<BirthdayQuizProps> = ({ onNext }) => {
     <div className="min-h-screen py-16 px-4 flex items-center justify-center">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6 drop-shadow-lg" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.1), 0 0 20px hsl(330 100% 85% / 0.5)' }}>
-            🎮 Birthday Quiz 🎮
-          </h2>
+          <div className="relative mb-6">
+            {/* Cute decorative elements */}
+            <div className="absolute -top-4 left-1/4 text-3xl animate-twinkle opacity-70">✨</div>
+            <div className="absolute -top-2 right-1/4 text-2xl animate-heartbeat opacity-80">💕</div>
+            <div className="absolute -bottom-2 left-1/3 text-2xl animate-float opacity-75">🎯</div>
+            <div className="absolute -bottom-2 right-1/3 text-2xl animate-heartbeat opacity-80">💖</div>
+            
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 relative z-10" style={{ 
+              background: 'linear-gradient(135deg, #ff6b9d, #c44569, #a8e6cf, #ff6b9d)',
+              backgroundSize: '200% 200%',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              animation: 'gradientShift 3s ease infinite',
+              filter: 'drop-shadow(0 0 15px rgba(255, 107, 157, 0.4))'
+            }}>
+              🎮 Birthday Quiz 🎮
+            </h2>
+          </div>
           <p className="text-xl text-muted-foreground">
             A fun little game about YOU! 
           </p>

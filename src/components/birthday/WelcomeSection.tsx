@@ -25,7 +25,15 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onStart }) => {
             <div className="absolute -bottom-2 -left-8 text-3xl animate-float">🎈</div>
             <div className="absolute -bottom-4 -right-4 text-4xl animate-twinkle">⭐</div>
             
-            <h1 className="text-6xl md:text-8xl font-playful text-primary glow-birthday relative z-10 animate-bounce-gentle drop-shadow-lg" style={{ textShadow: '2px 2px 12px rgba(0,0,0,0.15), 0 0 30px hsl(330 100% 85% / 0.6)' }}>
+            <h1 className="text-6xl md:text-8xl font-playful relative z-10 animate-bounce-gentle" style={{ 
+              background: 'linear-gradient(135deg, #ff6b9d, #c44569, #f8b500, #a8e6cf, #ff6b9d)',
+              backgroundSize: '200% 200%',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              animation: 'gradientShift 3s ease infinite',
+              filter: 'drop-shadow(0 0 20px rgba(255, 107, 157, 0.5))'
+            }}>
               <span className="inline-block animate-pulse">💕</span>
               <span className="mx-4">
               Happy Birthday, Name!
