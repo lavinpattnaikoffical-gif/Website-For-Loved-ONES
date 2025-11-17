@@ -34,7 +34,7 @@ export const EndingSection: React.FC<EndingSectionProps> = ({ onReplay }) => {
         <div className="animate-fade-in backdrop-blur-sm rounded-3xl p-4">
           <div className="mb-8">
             <div className="text-8xl mb-6 animate-heartbeat">💕</div>
-            <h2 className="text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-6" style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+            <h2 className="text-5xl md:text-6xl font-playful text-primary mb-6 drop-shadow-lg" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.1), 0 0 20px hsl(330 100% 85% / 0.5)' }}>
               Thank you for being my amazing Friend
             </h2>
             <h3 className="text-3xl md:text-4xl font-romantic text-primary mb-8 animate-typing overflow-hidden whitespace-nowrap transform transition-all duration-300 hover:scale-105">

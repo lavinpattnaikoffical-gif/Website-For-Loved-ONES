@@ -100,7 +100,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ onNext }) => {
     <div className="min-h-screen py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl md:text-6xl font-playful bg-gradient-romantic bg-clip-text text-transparent mb-6" style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+          <h2 className="text-5xl md:text-6xl font-playful text-primary mb-6 drop-shadow-lg" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.1), 0 0 20px hsl(330 100% 85% / 0.5)' }}>
             📸 Our Memories 📸
           </h2>
           <p className="text-xl text-muted-foreground">
