@@ -2,6 +2,10 @@
 
 A small React + TypeScript (Vite) project that renders a birthday-themed interactive website. Designed to be easy to customize and reuse, the project includes UI components, an image gallery, simple animations, and hooks for common behaviors.
 
+## Live Demo
+
+🌐 **Deployed Website**: [https://website-for-loved-ones.vercel.app/](https://website-for-loved-ones.vercel.app/)
+
 Purpose
 - Provide a friendly, easy-to-edit template for creating personalized greeting pages or small celebrations websites.
 - Demonstrate reusable component patterns, simple animations, and static asset handling in a Vite + React + TypeScript setup.
