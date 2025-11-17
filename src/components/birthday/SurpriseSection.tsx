@@ -102,21 +102,17 @@ export const SurpriseSection: React.FC<SurpriseSectionProps> = ({
         {/* Always-visible section heading */}
         <div className="relative mb-4">
           {/* Cute decorative elements */}
-          <div className="absolute -top-4 left-1/4 text-3xl animate-heartbeat opacity-80">💝</div>
-          <div className="absolute -top-2 right-1/4 text-2xl animate-twinkle opacity-70">✨</div>
-          <div className="absolute -bottom-2 left-1/3 text-2xl animate-float opacity-75">🎀</div>
-          <div className="absolute -bottom-2 right-1/3 text-2xl animate-heartbeat opacity-80">💖</div>
+          <div className="absolute -top-4 left-1/4 text-3xl animate-heartbeat opacity-80" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💝</div>
+          <div className="absolute -top-2 right-1/4 text-2xl animate-twinkle opacity-70" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>✨</div>
+          <div className="absolute -bottom-2 left-1/3 text-2xl animate-float opacity-75" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>🎀</div>
+          <div className="absolute -bottom-2 right-1/3 text-2xl animate-heartbeat opacity-80" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💖</div>
           
           <h2 className="text-5xl md:text-6xl font-playful mb-4 transition-transform duration-300 hover:scale-105 relative z-10" style={{ 
-            background: 'linear-gradient(135deg, #ff6b9d, #c44569, #f8b500, #ff6b9d)',
-            backgroundSize: '200% 200%',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            animation: 'gradientShift 3s ease infinite',
-            filter: 'drop-shadow(0 0 15px rgba(255, 107, 157, 0.4))'
+            color: '#d63384',
+            textShadow: '0 2px 20px rgba(214, 51, 132, 0.4), 0 0 30px rgba(214, 51, 132, 0.2)',
+            letterSpacing: '0.02em'
           }}>
-            🎁 Romantic Surprises 🎁
+            Romantic Surprises
           </h2>
         </div>
 

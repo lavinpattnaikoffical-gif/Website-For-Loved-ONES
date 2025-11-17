@@ -20,31 +20,27 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onStart }) => {
         <div className="animate-float mb-8">
           <div className="relative mb-4">
             {/* Decorative elements around the heading */}
-            <div className="absolute -top-4 -left-4 text-4xl animate-twinkle">✨</div>
-            <div className="absolute -top-2 -right-6 text-3xl animate-heartbeat">🎊</div>
-            <div className="absolute -bottom-2 -left-8 text-3xl animate-float">🎈</div>
-            <div className="absolute -bottom-4 -right-4 text-4xl animate-twinkle">⭐</div>
+            <div className="absolute -top-4 -left-4 text-4xl animate-twinkle" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>✨</div>
+            <div className="absolute -top-2 -right-6 text-3xl animate-heartbeat" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>🎊</div>
+            <div className="absolute -bottom-2 -left-8 text-3xl animate-float" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>🎈</div>
+            <div className="absolute -bottom-4 -right-4 text-4xl animate-twinkle" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>⭐</div>
             
             <h1 className="text-6xl md:text-8xl font-playful relative z-10 animate-bounce-gentle" style={{ 
-              background: 'linear-gradient(135deg, #ff6b9d, #c44569, #f8b500, #a8e6cf, #ff6b9d)',
-              backgroundSize: '200% 200%',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              animation: 'gradientShift 3s ease infinite',
-              filter: 'drop-shadow(0 0 20px rgba(255, 107, 157, 0.5))'
+              color: '#d63384',
+              textShadow: '0 3px 25px rgba(214, 51, 132, 0.5), 0 0 40px rgba(214, 51, 132, 0.3)',
+              letterSpacing: '0.02em'
             }}>
-              <span className="inline-block animate-pulse">💕</span>
+              <span className="inline-block animate-pulse" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
               <span className="mx-4">
               Happy Birthday, Name!
               </span>
-              <span className="inline-block animate-pulse">💕</span>
+              <span className="inline-block animate-pulse" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
             </h1>
             
             {/* Sparkle effects */}
-            <div className="absolute top-1/2 left-1/4 text-2xl animate-twinkle opacity-70">✨</div>
-            <div className="absolute top-1/3 right-1/3 text-xl animate-float opacity-60">💫</div>
-            <div className="absolute bottom-1/3 left-1/3 text-xl animate-heartbeat opacity-80">🌟</div>
+            <div className="absolute top-1/2 left-1/4 text-2xl animate-twinkle opacity-70" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>✨</div>
+            <div className="absolute top-1/3 right-1/3 text-xl animate-float opacity-60" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💫</div>
+            <div className="absolute bottom-1/3 left-1/3 text-xl animate-heartbeat opacity-80" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>🌟</div>
           </div>
           
           {/* Candles in a decorative box above the name */}
