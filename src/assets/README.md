@@ -1,11 +1,22 @@
 # src/assets
 
-Static assets used by the app (images, icons, etc.).
+Static assets imported and bundled by the application (images, icons, etc.).
 
-Files present:
+## Current Assets
 
-- `birthday-cake.jpg` - cake image used in UI
-- `fireworks.jpg` - background fireworks image
-- `birthday-hero.jpg` - hero/banner image
+- **`birthday-cake.jpg`** - Birthday cake image used in the SurpriseSection component
+- **`fireworks.jpg`** - Fireworks background image for celebration effects
+- **`birthday-hero.jpg`** - Hero/banner image used in WelcomeSection background
+  - Also copied to `public/og-image.jpg` for social media previews
 
-Add new images here and reference them from components (use `import` or `/src/assets` paths).
+## Usage
+
+- Import these assets in components using: `import imageName from '@/assets/image-name.jpg'`
+- These images are processed by Vite and optimized during build
+- For static files that don't need processing, use `public/` folder instead
+
+## Adding New Assets
+
+1. Add your image file to this folder
+2. Import it in your component: `import myImage from '@/assets/my-image.jpg'`
+3. Use it in JSX: `<img src={myImage} alt="description" />`

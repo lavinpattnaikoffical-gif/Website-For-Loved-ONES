@@ -1,22 +1,41 @@
 # src/components/birthday
 
-This folder contains the feature pieces that make up the birthday experience.
+This folder contains all the feature components that make up the romantic birthday website experience.
 
-Files
+## Components
 
-- `BackgroundMusic.tsx` - component that controls the background music player and its UI.
-- `BackgroundMusic.new.tsx` - an alternate/experimental version of the music component.
-- `BirthdayMessages.tsx` - renders the birthday letter/messages shown on the page.
-- `BirthdayQuiz.tsx` - a small interactive quiz component with questions/answers.
-- `FloatingAnimations.tsx` - handles floating/particle animations for the celebration effect.
-- `HeartExplosion.tsx` - visual heart explosion animation component.
-- `PhotoGallery.tsx` - photo gallery / slideshow component.
-- `SurpriseSection.tsx` - a section that reveals a surprise UI element.
-- `WelcomeSection.tsx` - opening/welcome hero section for the birthday page.
-- `EndingSection.tsx` - closing/thank-you section shown at the end.
-- `Read Me.txt` - (updated) instructions for editing the birthday components.
+### Core Sections
+- **`WelcomeSection.tsx`** - Opening hero section with animated "Happy Birthday" greeting featuring vibrant gradient text (pink → orange → yellow) and decorative emojis
+- **`PhotoGallery.tsx`** - Interactive photo carousel with auto-play, navigation controls, and decorative elements
+- **`BirthdayMessages.tsx`** - Love letter section with typing animation effect and romantic card styling
+- **`SurpriseSection.tsx`** - Interactive surprise section with clickable gift boxes, progress tracking, and bonus wishes
+- **`BirthdayQuiz.tsx`** - Fun interactive quiz component with multiple questions
+- **`EndingSection.tsx`** - Closing section with thank you message and replay options
 
-Notes
+### Supporting Components
+- **`BackgroundMusic.tsx`** - Background music player with controls
+- **`BackgroundMusic.new.tsx`** - Alternate/experimental version of the music component
+- **`FloatingAnimations.tsx`** - Handles floating decorative elements (hearts, stars, teddy bears, sparkles)
+- **`HeartExplosion.tsx`** - Special heart explosion animation with popup dialog
 
-- Media files (music and photos) are stored in `public/`.
-- If you want to change the music, add a file in `public/music` named `websitebackgroundsong.mp3`.
+## Design Features
+
+All headings use:
+- **Vibrant Gradients**: Animated gradients (pink → fuchsia → orange → yellow)
+- **Emoji Decorations**: Cute emojis on both sides of headings with proper font fallback
+- **Floating Elements**: Decorative emojis positioned around headings
+- **Smooth Animations**: Gradient shift animations and hover effects
+
+## Customization
+
+- **Messages**: Edit `BirthdayMessages.tsx` to customize the love letter content
+- **Photos**: Update the `photos` array in `PhotoGallery.tsx`
+- **Quiz Questions**: Modify the `questions` array in `BirthdayQuiz.tsx`
+- **Surprises**: Edit `surpriseItems` array in `SurpriseSection.tsx`
+- **Name Replacement**: Search for "Name!" and replace throughout all components
+
+## Notes
+
+- Media files (music and photos) are stored in `public/`
+- Background music: Add `websitebackgroundsong.mp3` to `public/music/`
+- All emojis use proper font fallback: `Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif`
