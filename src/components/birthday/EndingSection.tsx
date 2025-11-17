@@ -61,17 +61,17 @@ export const EndingSection: React.FC<EndingSectionProps> = ({ onReplay }) => {
             </p>
           </Card>
           
-          <div className="space-y-4 relative">
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center relative">
             {/* Heart Explosion Button */}
-            <HeartExplosion className="text-sm px-4 py-2 h-auto relative" />
+            <HeartExplosion className="relative" />
             
             <Button 
               variant="birthday" 
               size="lg" 
               onClick={onReplay}
-              className="text-xl px-12 py-6 h-auto font-playful animate-romantic-glow backdrop-blur-sm relative"
+              className="text-xl px-12 py-6 h-auto font-playful animate-romantic-glow backdrop-blur-sm relative w-full md:w-auto"
             >
-              💕 Experience the Magic Again 💕
+              <span style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕💕</span> Experience the Magic Again <span style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕💕</span>
             </Button>
           </div>
         </div>
