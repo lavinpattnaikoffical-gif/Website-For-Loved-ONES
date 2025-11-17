@@ -35,13 +35,13 @@ export const EndingSection: React.FC<EndingSectionProps> = ({ onReplay }) => {
           <div className="mb-8">
             <div className="text-8xl mb-6 animate-heartbeat" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</div>
             <h2 className="text-5xl md:text-6xl font-playful mb-6 relative z-10" style={{ 
-              background: 'linear-gradient(135deg, #ff6b9d, #c44569, #ba68c8, #9c27b0)',
+              background: 'linear-gradient(135deg, #ff6b9d, #e91e63, #ff9800, #ffc107)',
               backgroundSize: '200% 200%',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
               animation: 'gradientShift 3s ease infinite',
-              filter: 'drop-shadow(0 2px 15px rgba(255, 107, 157, 0.4))',
+              filter: 'drop-shadow(0 2px 15px rgba(255, 107, 157, 0.5))',
               letterSpacing: '0.02em'
             }}>
               <span className="inline-block animate-pulse mr-2" style={{ fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif' }}>💕</span>
